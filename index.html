@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru" class="h-full">
+<html lang="uk" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бинарные Лампочки | Интерактивный Урок</title>
+    <title>Бінарні Лампочки | Інтерактивний Урок</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font -->
@@ -33,16 +33,16 @@
                 </div>
                 <div>
                     <h1 class="text-xl font-bold tracking-tight text-white">CS50 Binary Lab</h1>
-                    <p class="text-xs text-slate-400">Интерактивный тренажер бинарного кода</p>
+                    <p class="text-xs text-slate-400">Інтерактивний тренажер двійкового коду</p>
                 </div>
             </div>
             
             <!-- Bit Width Selector -->
             <div class="flex items-center bg-slate-800 p-1.5 rounded-xl border border-slate-700">
-                <span class="text-xs font-medium text-slate-400 px-2">Разрядность:</span>
-                <button onclick="setBitWidth(8)" id="btn-8" class="px-3 py-1 rounded-lg text-xs font-semibold transition-all bg-yellow-500 text-slate-950 shadow">8 бит</button>
-                <button onclick="setBitWidth(12)" id="btn-12" class="px-3 py-1 rounded-lg text-xs font-semibold transition-all text-slate-300 hover:text-white">12 бит</button>
-                <button onclick="setBitWidth(16)" id="btn-16" class="px-3 py-1 rounded-lg text-xs font-semibold transition-all text-slate-300 hover:text-white">16 бит</button>
+                <span class="text-xs font-medium text-slate-400 px-2">Розрядність:</span>
+                <button onclick="setBitWidth(8)" id="btn-8" class="px-3 py-1 rounded-lg text-xs font-semibold transition-all bg-yellow-500 text-slate-950 shadow">8 біт</button>
+                <button onclick="setBitWidth(12)" id="btn-12" class="px-3 py-1 rounded-lg text-xs font-semibold transition-all text-slate-300 hover:text-white">12 біт</button>
+                <button onclick="setBitWidth(16)" id="btn-16" class="px-3 py-1 rounded-lg text-xs font-semibold transition-all text-slate-300 hover:text-white">16 біт</button>
             </div>
         </div>
     </header>
@@ -51,21 +51,21 @@
         
         <!-- Challenge Card (Hidden by default) -->
         <div id="challenge-banner" class="w-full bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/10 border border-amber-500/30 rounded-2xl p-4 mb-6 hidden backdrop-blur-sm shadow-lg text-center animate-pulse">
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">⚡ Режим задания учителя</span>
-            <p class="text-sm text-slate-300">Соберите число: <strong id="target-number" class="text-2xl text-yellow-400 font-extrabold mx-2">0</strong></p>
-            <div id="success-msg" class="text-emerald-400 font-bold text-sm mt-2 hidden">🎉 Отлично! Число собрано верно!</div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">⚡ Режим завдання вчителя</span>
+            <p class="text-sm text-slate-300">Зберіть число: <strong id="target-number" class="text-2xl text-yellow-400 font-extrabold mx-2">0</strong></p>
+            <div id="success-msg" class="text-emerald-400 font-bold text-sm mt-2 hidden">🎉 Чудово! Число зібрано вірно!</div>
         </div>
 
         <!-- Dashboard / Values Card -->
         <div class="w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-2xl backdrop-blur-md mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             <!-- Decimal -->
             <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-4 flex flex-col justify-center">
-                <span class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Десятичное (Dec)</span>
+                <span class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Десяткове (Dec)</span>
                 <span id="val-dec" class="text-3xl font-extrabold text-yellow-400 mt-1">0</span>
             </div>
             <!-- Hexadecimal -->
             <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-4 flex flex-col justify-center">
-                <span class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Шестнадцатеричное (Hex)</span>
+                <span class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Шістнадцяткове (Hex)</span>
                 <span id="val-hex" class="text-3xl font-extrabold text-cyan-400 mt-1">0x0</span>
             </div>
             <!-- ASCII Character -->
@@ -85,17 +85,17 @@
         <!-- Action Buttons -->
         <div class="flex flex-wrap justify-center gap-4 w-full">
             <button onclick="resetBits()" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm transition shadow flex items-center gap-2">
-                🔄 Сбросить все
+                🔄 Скинути все
             </button>
             <button onclick="toggleChallengeMode()" id="challenge-btn" class="px-6 py-3 rounded-xl bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold text-sm transition shadow-lg shadow-yellow-500/20 flex items-center gap-2">
-                🎯 Задать случайное число
+                🎯 Задати випадкове число
             </button>
         </div>
 
     </main>
 
     <footer class="w-full text-center py-4 text-xs text-slate-500 border-t border-slate-900">
-        Создано для увлекательных уроков информатики в стиле Гарварда CS50. Кликайте по лампам!
+        Створено для захопливих уроків інформатики в стилі Гарварда CS50. Кликайте по лампах!
     </footer>
 
     <script>
@@ -234,14 +234,14 @@
             if (!isChallengeActive) {
                 isChallengeActive = true;
                 banner.classList.remove('hidden');
-                btn.innerText = "❌ Выйти из режима задания";
+                btn.innerText = "❌ Вийти з режиму завдання";
                 btn.className = "px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition shadow-lg shadow-red-600/20 flex items-center gap-2";
                 generateNewChallenge();
             } else {
                 isChallengeActive = false;
                 banner.classList.add('hidden');
                 document.getElementById('success-msg').classList.add('hidden');
-                btn.innerText = "🎯 Задать случайное число";
+                btn.innerText = "🎯 Задати випадкове число";
                 btn.className = "px-6 py-3 rounded-xl bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold text-sm transition shadow-lg shadow-yellow-500/20 flex items-center gap-2";
             }
         }
